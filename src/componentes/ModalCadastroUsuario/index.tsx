@@ -1,10 +1,11 @@
-import { AbModal } from "ds-alurabooks"
+import { AbModal } from "ds-alurabooks";
 
 const ModalCadastroUsuario = () => {
-    return (<AbModal aberta = {true}
-    aoFechar={()=>console.log("Fecha ai")}>
-        <h1>Olá mundo</h1>
-    </AbModal>)
-}
+  return (
+    <AbModal titulo="Cadastrar"  aberta={true} aoFechar={() => console.log("fecha ai")}>
+      <h1>Olá Mundo</h1>
+    </AbModal>
+  );
+};
 
-export default ModalCadastroUsuario
+export default ModalCadastroUsuario;
