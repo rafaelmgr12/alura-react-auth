@@ -1,9 +1,14 @@
-import { AbModal } from "ds-alurabooks";
+import { AbCampoTexto, AbModal } from "ds-alurabooks";
+
+import imagemPrincipal from "./assets/login.png";
 
 const ModalCadastroUsuario = () => {
   return (
     <AbModal titulo="Cadastrar"  aberta={true} aoFechar={() => console.log("fecha ai")}>
-      <h1>Olá Mundo</h1>
+      <figure>
+        <img src={imagemPrincipal} alt="Monitor com fechadura e uma pessoa com uma chave logo ao lado." />
+      </figure>
+      <form></form>
     </AbModal>
   );
 };
