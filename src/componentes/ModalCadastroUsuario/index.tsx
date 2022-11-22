@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import imagemPrincipal from "./assets/login.png";
 
+import "./ModalCadastroUsuario.css";
+
 const ModalCadastroUsuario = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -18,12 +20,14 @@ const ModalCadastroUsuario = () => {
       aberta={true}
       aoFechar={() => console.log("fecha ai")}
     >
-      <figure>
-        <img
-          src={imagemPrincipal}
-          alt="Monitor com fechadura e uma pessoa com uma chave logo ao lado."
-        />
-      </figure>
+      <div className="corpoModalCadastro">
+        <figure>
+          <img
+            src={imagemPrincipal}
+            alt="Monitor com fechadura e uma pessoa com uma chave logo ao lado."
+          />
+        </figure>
+ 
       <form>
         <AbCampoTexto label="Nome" value={nome} onChange={setNome} />
         <AbCampoTexto label="Email" value={email} onChange={setEmail} />
@@ -48,6 +52,7 @@ const ModalCadastroUsuario = () => {
           <AbBotao texto="Cadastrar" />
         </footer>
       </form>
+      </div>
     </AbModal>
   );
 };
